@@ -85,16 +85,6 @@ function createGalleryImages(images) {
 const galleryContainer = document.querySelector('.gallery');
 galleryContainer.insertAdjacentHTML("beforeend", createGalleryImages(images));
 
-galleryContainer.addEventListener('click', onGalleryClick);
-function onGalleryClick(event) {
-  event.preventDefault();
-  const isGalleryImage = event.target.classList.contains('gallery-image');
-  
-  if (!isGalleryImage) {
-    return;
-  }
-}
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionSelector: 'img',
